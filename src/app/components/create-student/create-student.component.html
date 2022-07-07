@@ -1,0 +1,36 @@
+<!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-sm">
+    <div class="modal-content">
+      
+      <div class="modal-header bg-primary">
+        <h6 class="modal-title text-white" id="exampleModalLabel">CREAR ALUMNO</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form action="" [formGroup]="formStudent" (ngSubmit)="onSubmit()">
+          <div class="row mb-3">
+            <section class="col-md-6">
+              <label for="nombres" class="form-label text-primary">Nombres</label>
+              <input type="text" class="form-control mb-3" placeholder="Zulema" id="nombres" formControlName="names">
+              <label for="apellidos" class="form-label text-primary">Apellidos</label>
+              <input type="text" class="form-control mb-3" placeholder="Flores Sanchez" id="apellidos" formControlName="lastnames">
+              <label for="phone" class="form-label text-primary">Teléfono</label>
+              <input type="tel" class="form-control" id="phone" placeholder="99442786" formControlName="phone">
+            </section>
+            <section class="col-md-6">
+              <label for="dni" class="form-label text-primary">DNI</label>
+              <input type="number" class="form-control mb-3" placeholder="42693611" id="dni" formControlName="dni">
+              <label for="nacimiento" class="form-label text-primary">Fecha de nacimiento</label>
+              <input type="date" class="form-control mb-5"  placeholder="29/11/1983" id="nacimiento" formControlName="dateOfBirth">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>&nbsp;
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </section>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+   
